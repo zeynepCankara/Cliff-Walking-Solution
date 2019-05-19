@@ -143,6 +143,7 @@ def get_reward(state):
     # cliff
     if(state >= 37 and state <= 46):
         game_end = True
+        # Penalize the agent if agent encounters a cliff
         reward = -100
 
     return reward, game_end
@@ -469,5 +470,5 @@ def main():
         retrieve_environment(q_table_SARSA, 3)
     
 if __name__ == "__main__":
-    # call main function to execute grif world
+    # call main function to execute grid world
     main()
